@@ -1,4 +1,3 @@
-let direction;
 let tilesNum = 225;
 let tilesPerRow = Math.sqrt(tilesNum);
 let rowStartLeft = new Array();
@@ -17,6 +16,7 @@ let scoreSpan = document.getElementsByClassName('score')[0];
 let score = 0;
 let speed = 0.1;
 let year = new Date().toDateString();
+let direction = 'r'
 
 
 restartButton.addEventListener("click", function () {
@@ -117,7 +117,8 @@ function changeDirection(d) {
             directionArrayOf = rowEndBottom;
             break;
     }
-
+    
+   
     clearInterval(moving);
 
     moving = setInterval(function () {
@@ -156,6 +157,7 @@ function changeDirection(d) {
     }, 10 / speed);
 }
 
+
 function generateFruit() {
     let rand;
     let fruit = document.getElementsByClassName('fruit')[0];
@@ -173,6 +175,11 @@ function fruitGen() {
         generateFruit();
     }, 3000)
 };
+
+// Inside your JavaScript file
+
+
+
 
 function startGame() {
     createGrid();
@@ -193,3 +200,8 @@ function restartGame() {
 }
 
 startGame();
+// Add event listeners to arrow key buttons
+document.getElementById('up').addEventListener('click', () => changeDirection('u'));
+document.getElementById('down').addEventListener('click', () => changeDirection('d'));
+document.getElementById('left').addEventListener('click', () => changeDirection('l'));
+document.getElementById('right').addEventListener('click', () => changeDirection('r'));

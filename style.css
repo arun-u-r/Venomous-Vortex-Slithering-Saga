@@ -50,7 +50,8 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #000000; 
-  color: #ffffff; 
+  opacity: 0.75;
+  color: #fffb00; 
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease; 
@@ -66,9 +67,6 @@ body {
   }
 }
 
-.score_container:hover {
-  transform: scale(1.05); /* Scale up on hover for a subtle interactive effect */
-}
 
 /* Styles for restart button */
 #restart_game {
@@ -136,6 +134,8 @@ body {
   font-weight:  bold;
   color: #ffffff;
   padding-bottom: 10px;
+  text-align: center;
+
 }
 
 /* Media query for responsiveness */
@@ -156,4 +156,34 @@ body {
 }
 .footer{
   text-align: center;
+}
+/* Style for control buttons */
+#controls {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  margin-top: 10px; /* Add some space above the buttons */
+}
+
+#controls button {
+  width: 40px; /* Adjust button width */
+  height: 40px; /* Adjust button height */
+  font-size: 20px; /* Adjust font size */
+  background-color: #f0f0f0; /* Button background color */
+  border: none;
+  margin: 5px; /* Adjust button margin */
+  cursor: pointer;
+}
+
+
+
+/* Ensure left and right buttons are displayed next to each other */
+#controls > div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Adjust margin between left and right buttons */
+#controls > div button {
+  margin: 5px;
 }
