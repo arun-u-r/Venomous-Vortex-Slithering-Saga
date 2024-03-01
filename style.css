@@ -1,0 +1,159 @@
+/* Import Google Fonts and global styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Potta+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Set background image and styles */
+body {
+  background-image: url(./background.jpg);
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Ensure full height of HTML and body */
+html,
+body {
+  height: 100%;
+}
+
+/* Center content vertically and horizontally */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container styles */
+.container {
+  position: relative;
+  padding: 20px;
+}
+
+/* Styles for score container */
+.score_container {
+   text-align: center;
+   margin-top: 30px;
+  padding: 10px 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000; 
+  color: #ffffff; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease; 
+  font-weight: bolder;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.score_container:hover {
+  transform: scale(1.05); /* Scale up on hover for a subtle interactive effect */
+}
+
+/* Styles for restart button */
+#restart_game {
+  margin: 10px auto;
+  display: block;
+  padding: 8px 5px;
+  background: rgb(30, 141, 2);
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  animation: bounce 1s infinite alternate-reverse;
+
+}
+
+/* Styles for title */
+.title {
+  font-size: 16px;
+}
+
+/* Game board styles */
+.game {
+  height: 400px;
+  max-width: 100%; /* Ensure the game board doesn't exceed the viewport width */
+  background: #3aeb3a;
+  margin: 0 auto;
+}
+
+/* Styles for game tiles */
+.tile {
+  float: left;
+  margin: 0;
+  content: "";
+  background: #34dd34;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+}
+
+/* Styles for body of the snake */
+.body {
+  background: #e23939;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+/* Styles for snake head */
+.head {
+  background: black;
+  border-radius: 0 10px 0 10px;
+}
+
+/* Styles for fruit */
+.fruit {
+  background: #fc0505;
+  border-radius: 5px;
+}
+
+/* Styles for instructions */
+.instructions {
+  background-color:rgb(4, 5, 5);
+  opacity: 0.75;
+  font-size: 13px;
+  font-weight:  bold;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .container {
+    padding: 10px;
+  }
+  .score_container {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .instructions {
+    font-size: 12px;
+  }
+}
+.footer{
+  text-align: center;
+}
